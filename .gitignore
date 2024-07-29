@@ -2,5 +2,9 @@ venv
 __pycache__
 dist
 pkg
-qtheme.egg-info
+*.egg-info
+.egg
 build
+*.tar.gz
+*.pkg.tar.zst
+src
