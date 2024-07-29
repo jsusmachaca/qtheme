@@ -1,6 +1,7 @@
 # Maintainer: jsusmachaca <falcorgd@gmail.com>
+
 pkgname=qtheme
-pkgver=1.1
+pkgver=1.2
 pkgrel=1
 pkgdesc="Tool for management qtile desktop environment"
 url='https://github.com/jsusmachaca/qtheme'
