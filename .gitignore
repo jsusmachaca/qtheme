@@ -1,0 +1,6 @@
+venv
+__pycache__
+dist
+pkg
+qtheme.egg-info
+build
