@@ -1,8 +1,8 @@
 # QTHEME
 
 
-![preview](preview/bars.png)
-![preview](preview/term.png)
+![preview](https://raw.githubusercontent.com/jsusmachaca/qtheme/master/preview/bars.png)
+![preview](https://raw.githubusercontent.com/jsusmachaca/qtheme/master/preview/term.png)
 
 # Installation
 
@@ -31,7 +31,7 @@ qtheme -ls
 ```
 Output:
 
-![preview](preview/list.png)
+![preview](https://raw.githubusercontent.com/jsusmachaca/qtheme/master/preview/list.png)
 
 To change the qtile theme
 ```sh
