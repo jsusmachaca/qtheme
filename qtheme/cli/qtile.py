@@ -65,11 +65,12 @@ class Qtile:
     def set_qtile_theme(self, theme: str = None):
         try:
             full_path = path.join(self.user_path, '.config', 'qtile', 'themes', 'theme_selector.json')
+            qtile_theme_path = path.join(self.user_path, '.config', 'qtile', 'themes')
 
             if theme is None:
                 return
 
-            if not path.exists(path.join(self.user_path, '.config', 'qtile', 'themes', theme + '.json')):
+            if not path.exists(path.join(qtile_theme_path, theme + '.json')):
                 raise FileNotFoundError(f'The file "{theme}.json" does not exist')
             
             with open(full_path, 'r+') as file:

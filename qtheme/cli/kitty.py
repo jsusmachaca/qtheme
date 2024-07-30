@@ -9,6 +9,7 @@ class Kitty:
     def set_terminal_theme(self, theme: str = None):
         try:
             kitty_conf_path = path.join(self.user_path, '.config', 'kitty', 'kitty.conf')
+            kitty_theme_path = path.join(self.user_path, '.config', 'kitty', 'themes')
             
             if theme is None:
                 return
@@ -16,6 +17,9 @@ class Kitty:
             if not path.exists(kitty_conf_path):
                 raise FileNotFoundError('The conf file kitty does not exist.')
 
+            if not path.exists(path.join(kitty_theme_path, theme + '.conf')):
+                raise FileNotFoundError(f'The file "{theme}.conf" does not exist')
+            
             with open(kitty_conf_path, 'r+') as file:
                 lines = file.readlines()
                 for index, line in enumerate(lines):
