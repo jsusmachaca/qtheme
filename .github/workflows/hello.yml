@@ -11,4 +11,7 @@ jobs:
     steps:
       - name: Hola
         run: echo "Hola bro"
+
+      - name: Upload
+        run: ls -la 
         
