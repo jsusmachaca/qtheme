@@ -1,0 +1,14 @@
+name: Say hello
+
+on:
+  push:
+    branches:
+      - master
+  
+jobs:
+  updated:
+    runs-on: ubuntu-24.04
+    steps:
+      - name: Hola
+        run: echo "Hola bro"
+        
