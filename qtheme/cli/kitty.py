@@ -10,16 +10,16 @@ class Kitty:
         try:
             kitty_conf_path = path.join(self.user_path, '.config', 'kitty', 'kitty.conf')
             kitty_theme_path = path.join(self.user_path, '.config', 'kitty', 'themes')
-            
+
             if theme is None:
                 return
-            
+
             if not path.exists(kitty_conf_path):
                 raise FileNotFoundError('The conf file kitty does not exist.')
 
             if not path.exists(path.join(kitty_theme_path, theme + '.conf')):
                 raise FileNotFoundError(f'The file "{theme}.conf" does not exist')
-            
+
             with open(kitty_conf_path, 'r+') as file:
                 lines = file.readlines()
                 for index, line in enumerate(lines):
@@ -43,10 +43,10 @@ class Kitty:
     def set_terminal_font(self, font_family: str = None):
         try:
             kitty_conf_path = path.join(self.user_path, '.config', 'kitty', 'kitty.conf')
-            
+
             if font_family is None:
                 return
-            
+
             if not path.exists(kitty_conf_path):
                 raise FileNotFoundError('The conf file kitty does not exist.')
 
@@ -73,10 +73,10 @@ class Kitty:
     def set_terminal_opacity(self, opacity: str = None):
         try:
             kitty_conf_path = path.join(self.user_path, '.config', 'kitty', 'kitty.conf')
-            
+
             if opacity is None:
                 return
-            
+
             if not path.exists(kitty_conf_path):
                 raise FileNotFoundError('The conf file kitty does not exist.')
 

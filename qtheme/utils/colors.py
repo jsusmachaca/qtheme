@@ -16,4 +16,3 @@ def magenta(text):
 
 def imagenta(text):
     return input(f'\033[35m{text}\033[00m').strip()
-    

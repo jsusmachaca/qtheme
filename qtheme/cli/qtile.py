@@ -7,7 +7,7 @@ import json
 class Qtile:
     def __init__(self, user_path) -> None:
         self.user_path = user_path
-        
+
     def menu_themes(self):
         full_path = path.join(self.user_path, '.config', 'qtile', 'themes', 'theme_selector.json')
         qtile_themes_path = path.join(self.user_path, '.config', 'qtile', 'themes')
@@ -41,17 +41,17 @@ class Qtile:
 
             if position is None:
                 return
-            
+
             if position not in {'top', 't', 'bottom', 'b'}:
                 raise ValueError('The position is not correct')
-            
+
             with open(full_path, 'r+') as file:
                 data = json.load(file)
                 data['position'] = 'bottom' if position in {'b', 'bottom'} else 'top' 
                 file.seek(0)
                 json.dump(data, file, indent=2, sort_keys=True)
                 file.truncate()
-        
+
             subprocess.run(['qtile', 'cmd-obj', '-o', 'cmd', '-f', 'reload_config'], check=True)
             green(f'Bar position changed correctly to {"bottom" if position in {"b", "bottom"} else "top" }')
 
@@ -72,14 +72,14 @@ class Qtile:
 
             if not path.exists(path.join(qtile_theme_path, theme + '.json')):
                 raise FileNotFoundError(f'The file "{theme}.json" does not exist')
-            
+
             with open(full_path, 'r+') as file:
                 data = json.load(file)
                 data['theme'] = theme
                 file.seek(0)
                 json.dump(data, file, indent=2, sort_keys=True)
                 file.truncate()
-        
+
             subprocess.run(['qtile', 'cmd-obj', '-o', 'cmd', '-f', 'reload_config'], check=True)
             green(f'Theme changed correctly to "{theme}"')
 
