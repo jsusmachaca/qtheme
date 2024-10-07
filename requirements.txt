@@ -1,0 +1,5 @@
+beautifulsoup4==4.12.3
+qtheme==1.4
+scrapeasy==0.12
+soupsieve==2.6
+validators==0.34.0
