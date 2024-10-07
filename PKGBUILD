@@ -9,7 +9,7 @@ arch=('any')
 license=('MIT')
 depends=('python>=3.12' 'qtile' 'kitty' 'fastfetch')
 source=(${pkgname}-${pkgver}.tar.gz::${url}/archive/v${pkgver}.tar.gz)
-sha512sums=('0d18419e50377e5e67ec2605c31c261e6b25a485221110b0e049453f03db12e55848162ab71cb8be8225ba4b1f1ece9417e694f14a1675273a752fb8010be01f')
+sha512sums=('9f44978cf5381ff31c9fad804e680b24451e1da9f8f9fb6c891f43d925635fce6f9f7bed335c10d0e0b5faa7f5d2f4faa059d173a4b8961e81751dfe1087becb')
 
 build() {
 	cd $pkgname-$pkgver
